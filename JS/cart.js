@@ -34,19 +34,23 @@ async function loadCart() {
       total += itemTotal;
 
       const div = document.createElement("div");
-      div.className = "flex lg:flex-col lg:items-center gap-6 bg-white shadow p-4 rounded";
+      div.className = "flex flex-col lg:flex-row lg:items-center justify-between gap-6 bg-white shadow p-4 rounded";
       div.innerHTML = `
-        <img src="${product.image}" alt="${product.title}" class="w-50 h-20 object-contain">
-        <div class="flex-1">
+        <img src="${product.image}" alt="${product.title}" class="w-32 h-32 object-contain mx-auto lg:mx-0">
+        <div class="flex-1 text-center lg:text-left">
           <h2 class="font-semibold text-blue-900 text-sm lg:text-lg">${product.title}</h2>
           <p class="text-gray-600">$${product.price.toFixed(2)}</p>
           <p class="text-gray-600">Quantity: ${item.quantity}</p>
         </div>
-        <p class="font-bold text-blue-600">$${itemTotal.toFixed(2)}</p>
-        <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition" onclick="removeFromCart(${item.id})">
+        <p class="font-bold text-blue-600 text-center lg:text-right">$${itemTotal.toFixed(2)}</p>
+        <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
           Remove
         </button>
       `;
+
+      // Attach remove event
+      div.querySelector("button").addEventListener("click", () => removeFromCart(item.id));
+
       cartItemsContainer.appendChild(div);
     } catch (error) {
       console.error("Error fetching product for cart:", error);
