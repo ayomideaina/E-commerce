@@ -34,7 +34,7 @@ async function loadCart() {
       total += itemTotal;
 
       const div = document.createElement("div");
-      div.className = "flex flex-col lg:items-center gap-6 bg-white shadow p-4 rounded";
+      div.className = "flex lg:flex-col lg:items-center gap-6 bg-white shadow p-4 rounded";
       div.innerHTML = `
         <img src="${product.image}" alt="${product.title}" class="w-50 h-20 object-contain">
         <div class="flex-1">
