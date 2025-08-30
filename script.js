@@ -29,7 +29,7 @@ async function fetchCategories() {
 async function fetchProducts(category = null) {
     try {
         let url = category
-            ? `${API_URL}/products/category/${category}`
+            ? `${API_URL}/products/category/${encodeURIComponent(category)}`
             : `${API_URL}/products?limit=8`;
 
         const res = await fetch(url);
@@ -39,6 +39,7 @@ async function fetchProducts(category = null) {
         console.error("Error fetching products:", error);
     }
 }
+
 
 //DISPLAY FUNCTIONS
 function displayCategories(categories) {
