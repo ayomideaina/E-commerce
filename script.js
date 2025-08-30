@@ -13,7 +13,6 @@ function updateCartCount() {
     document.getElementById("cart-count").textContent = count;
 }
 
-
 const API_URL = "https://fakestoreapi.com";
 
 async function fetchCategories() {
@@ -55,17 +54,17 @@ function displayCategories(categories) {
         `;
 
         div.addEventListener("click", () => {
-            // Remove highlight from all
+            // Remove highlight from all categories
             document.querySelectorAll("#category div").forEach(c => {
-                c.classList.remove("bg-blue-500", "text-white");
+                c.classList.remove("bg-blue-400", "text-white");
                 c.classList.add("bg-white", "text-gray-800");
             });
 
-            // Highlight selected
+            // Highlight only the selected category
             div.classList.remove("bg-white", "text-gray-800");
-            div.classList.add("bg-blue-500", "text-white");
+            div.classList.add("bg-blue-400", "text-white");
 
-            // Fetch products by category
+            // Fetch products for selected category
             fetchProducts(cat);
         });
 
