@@ -25,7 +25,7 @@ function fetchProductDetails(id) {
 function displayProduct(product) {
   productDetails.innerHTML = `
     <div class="flex justify-center">
-      <img src="${product.image}" alt="${product.title}" class="w-80 h-80 object-contain">
+      <img src="${product.image}" alt="${product.title}" class="w-80 h-80 object-contain transition-transform duration-300 hover:scale-105">
     </div>
     <div class="flex flex-col justify-center">
       <h2 class="text-2xl font-bold text-gray-800 mb-4">${product.title}</h2>

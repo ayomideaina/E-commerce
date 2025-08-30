@@ -37,7 +37,7 @@ async function loadCart() {
       div.className = "flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white shadow p-4 rounded";
       div.innerHTML = `
         <img src="${product.image}" alt="${product.title}" class="w-32 h-32 object-contain mx-auto lg:mx-0">
-        <div class="flex-1 text-center lg:text-left">
+        <div class="flex-1 text-center md:text-left">
           <h2 class="font-semibold text-blue-900 text-sm lg:text-lg">${product.title}</h2>
           <p class="text-gray-600">$${product.price.toFixed(2)}</p>
           <p class="text-gray-600">Quantity: ${item.quantity}</p>

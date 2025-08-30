@@ -1,3 +1,8 @@
+document.getElementById("menu-btn").addEventListener("click", () => {
+  document.getElementById("mobile-menu").classList.toggle("hidden");
+});
+
+
 function getCart() {
     return JSON.parse(localStorage.getItem("cart")) || [];
 }

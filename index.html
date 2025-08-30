@@ -13,30 +13,37 @@
         <header class="bg-white shadow-md sticky top-0 z-50">
             <div class="container mx-auto px-4 py-4">
                 <div class="flex items-center justify-between">
+                
                     <!-- Logo -->
                     <div class="flex items-center">
                         <i class="fas fa-store text-2xl text-blue-400 mr-2"></i>
                         <h1 class="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-                            MideStore
+                        MideStore
                         </h1>
                     </div>
-                    
-                    <!-- Navigation -->
+
+                    <!-- Desktop Navigation -->
                     <nav class="hidden md:flex space-x-6">
                         <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
                         <a href="#shop" class="text-gray-700 hover:text-blue-600 font-medium">Shop</a>
                         <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
                         <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
                     </nav>
-                    
+
+                    <!-- Hamburger Button (Mobile only) -->
+                    <div class="md:hidden">
+                        <button id="menu-btn" class=" text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
 
                     <!-- Search and Cart -->
                     <div class="flex items-center space-x-4">
                         <div class="hidden md:flex items-center bg-gray-100 rounded-lg px-3 py-2">
                             <input type="text" placeholder="Search products..." class="bg-transparent outline-none text-sm w-40">
                             <i class="fas fa-search text-gray-500"></i>
-                        </div>
-                        <div class="relative">
+                            </div>
+                            <div class="relative">
                             <a href="pages/cart.html" class="flex items-center text-gray-700 hover:text-blue-600">
                                 <i class="fas fa-shopping-cart text-xl"></i>
                                 <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
@@ -44,14 +51,23 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-5 pt-2 px-4 pb-4 space-y-2">
+                    <a href="index.html" class="block hover:text-blue-500">Home</a>
+                    <a href="#shop" class="block hover:text-blue-500">Shop</a>
+                    <a href="#about" class="block hover:text-blue-500">About</a>
+                    <a href="#contact" class="block hover:text-blue-500">Contact</a>
+                </div>
             </div>
         </header>
+
 
         <!-- Hero Section -->
         <section id="about" class="bg-gradient-to-r from-blue-100 t0-gray-800 text-black py-14 lg:py-32 ">
             <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-10">
             <!-- Text -->
-            <div class="lg:w-1/2 text-center lg:text-left">
+            <div class="lg:w-1/2 text-cen ter lg:text-left">
                 <h1 class="text-4xl lg:text-5xl font-bold mb-6">Discover Your Perfect Style</h1>
                 <p class="text-lg mb-8">
                     Shop the latest fashion and accessories from trusted brands, all in one place.
@@ -68,7 +84,7 @@
             <div class="lg:w-1/2">
                 <img src="https://as1.ftcdn.net/v2/jpg/02/04/13/94/1000_F_204139479_0TYdUjaXfkRQEpiYf33qPMJUdlRvwNIm.jpg"
                  alt="Hero Banner" 
-                 class="rounded-xl shadow-lg"
+                 class="rounded-xl  shadow-lg"
                 >
             </div>
             </div>
