@@ -1,3 +1,20 @@
+// Mobile menu toggle functionality
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const openIcon = document.getElementById("open");
+  const closeIcon = document.getElementById("close");
+
+  menuBtn.addEventListener("click", () => {
+    // toggle navbar
+    mobileMenu.classList.toggle("hidden");
+
+    // toggle icons
+    openIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden"); 
+  });
+});
+
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 
@@ -63,3 +80,4 @@ if (productId) {
   productDetails.innerHTML = `<p class="text-gray-500">No product selected.</p>`;
 }
 
+//Wait until DOM is fully ready before binding menu button

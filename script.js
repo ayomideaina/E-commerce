@@ -1,5 +1,18 @@
-document.getElementById("menu-btn").addEventListener("click", () => {
-  document.getElementById("mobile-menu").classList.toggle("hidden");
+// Mobile menu toggle functionality
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const openIcon = document.getElementById("open");
+  const closeIcon = document.getElementById("close");
+
+  menuBtn.addEventListener("click", () => {
+    // toggle navbar
+    mobileMenu.classList.toggle("hidden");
+
+    // toggle icons
+    openIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden"); 
+  });
 });
 
 
